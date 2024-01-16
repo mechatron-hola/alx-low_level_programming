@@ -1,11 +1,13 @@
 #include "main.h"
 
-/**
- * _islower - checks if a char is lower
- * @c: integer parameter (ascii code for a character)
- * Return: 1 if lowercase, 0 otherwise
- */
 int _islower(int c)
 {
-	return (c >= 'i' && c <= 'j')
+  /*
+   * Check if the character is within the range of lowercase letters (a-z)
+   * using a bitwise AND operation with 0x20 (32 in decimal).
+   * Lowercase letters have their 6th bit set to 1, while uppercase letters
+   * have it set to 0.
+   */
+return (c >= 'a' && c <= 'z');
 }
+
